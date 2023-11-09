@@ -5,24 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-{?php
-$I = 1;
-$connection = new SQLite3('DOST.db');
-// если подключились
-if($connection){
-// выводим сообщение
-echo "<p>✅ Подключились к базе данных</p>";
-}
-$row=$results->fetchArray(SQLITE3_ASSOC);
-// если они есть
-if ($row != false) {
-$result = $connection -> query("Select * FROM 'DOST', 'DOST_TIP' WHERE 'DOST.ID' == $I");
-// пока есть записи в результатах поиска — выводим их
-while($row=$results->fetchArray(SQLITE3_ASSOC)){
-echo '<strong>' . $row['ADRESS'] . '</strong><br>';
-echo 'Ник:		' . $row['name'] . '<br>';
-echo 'Отчёт:	' . $row['OPISANIE'] . '<br>';
-echo '<br>';
-?}
+<p>✅ Подключились к базе данных</p>
 </body>
 </html>
